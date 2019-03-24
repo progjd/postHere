@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+  <ion-card *ngFor="let item of posto">
+  <img [src]="item.imagem"/>
+  <ion-card-content>
+    <ion-card-title>{{item.nomePosto}}</ion-card-title>
+    <p>
+    {{item.geolocalizacao}}
+    </p>
+  </ion-card-content>
+  <button ion-button block (click)="abreMapa()">ir para</button>
+  <button ion-button color="success">R${{item.vl_txt}}</button>
+  <button ion-button block color="light"(click)="voltar()">Cancelar</button>
+</ion-card>
+</ion-content>

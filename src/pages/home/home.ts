@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import {MapaPage} from '../mapa/mapa';
+import {CadastroPage} from '../cadastro/cadastro';
 
 @Component({
   selector: 'page-home',
@@ -17,9 +18,10 @@ export class HomePage {
 console.log(pos);
 })
 }
-  abreMapa(){
+  /*abreMapa(){
     this.navCtrl.push(MapaPage);
+  }*/
+  abrePosto(){
+    this.navCtrl.push(CadastroPage)
   }
-
-
 }

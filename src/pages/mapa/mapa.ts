@@ -22,10 +22,14 @@ export class MapaPage {
     navigator.geolocation.getCurrentPosition((pos)=>{
 
       let mapa = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: pos.coords.latitude, lng: pos.coords.longitude},
+        center: {lat:pos.coords.latitude, lng:pos.coords.longitude},
         zoom: 17
       });
-      var marker = new google.maps.Marker({position: {lat:pos.coords.latitude,lng:pos.coords.longitude}, map: mapa});
+      var marker = new google.maps.Marker({
+        position: {
+          lat:pos.coords.latitude,
+          lng:pos.coords.longitude},
+          map: mapa,});
     })
 
   }

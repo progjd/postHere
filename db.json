@@ -1,0 +1,28 @@
+{
+  "posto": [
+    {
+      "id": 1,
+      "nomePosto": "Posto Ipiranga",
+      "geolocalizacao": "Rua do beijo",
+      "valor": 10,
+      "vl_txt": "10,00",
+      "imagem": "assets/imgs/Ipiranga.png"
+    },
+    {
+      "id": 2,
+      "nomePosto": "Posto Petrobras",
+      "geolocalizacao": "Rua Getulio Vargas",
+      "valor": 3.6,
+      "vl_txt": "3,60",
+      "imagem": "assets/imgs/Petrobras.png"
+    },
+    {
+      "nomePosto": "Posto Shell",
+      "geolocalizacao": "Rua do beijo",
+      "valor": 10,
+      "vl_txt": "10,00",
+      "imagem": "assets/imgs/Ipiranga.png",
+      "id": 4
+    }
+  ]
+}
