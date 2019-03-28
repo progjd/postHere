@@ -6,7 +6,7 @@
 
 <ion-content padding >
   <ion-card *ngFor="let item of posto">
-  <img [src]="item.imagem"/>
+  <img height="70" [src]="item.imagem"/>
   <ion-card-content>
     <ion-card-title>{{item.nomePosto}}</ion-card-title>
     <p>
@@ -14,7 +14,8 @@
     </p>
   </ion-card-content>
   <button ion-button block (click)="abreMapa()">ir para</button>
-  <button ion-button color="success">R${{item.vl_txt}}</button>
+  <div class="spacer" style="height:1px;" >  </div>
+  <button  ion-button color="success">R${{item.vl_txt}}</button>
   <button ion-button block color="light"(click)="voltar()">Cancelar</button>
 </ion-card>
 </ion-content>

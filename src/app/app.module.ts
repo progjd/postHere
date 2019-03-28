@@ -12,6 +12,7 @@ import { UsuarioPage } from '../pages/usuario/usuario';
 
 import {MapaPage} from '../pages/mapa/mapa';
 import { PostosProvider } from '../providers/postos/postos';
+import { UsuariosProvider } from '../providers/usuarios/usuarios';
 
 
 
@@ -44,7 +45,8 @@ import { PostosProvider } from '../providers/postos/postos';
     SplashScreen,
 
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    PostosProvider
+    PostosProvider,
+    UsuariosProvider
   ]
 })
 export class AppModule {}

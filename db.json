@@ -17,12 +17,24 @@
       "imagem": "assets/imgs/Petrobras.png"
     },
     {
-      "nomePosto": "Posto Shell",
+      "nomePosto": "Posto Liberdade",
       "geolocalizacao": "Rua do beijo",
       "valor": 10,
       "vl_txt": "10,00",
       "imagem": "assets/imgs/Ipiranga.png",
-      "id": 4
+      "id": 4,
+      "gps": {
+        "lat": 5.08334,
+        "lgn": -4547281
+      }
+    }
+  ],
+  "usuarios": [
+    {
+      "name": "joao",
+      "email": "joao@joao",
+      "password": "123456",
+      "id": 1
     }
   ]
 }
