@@ -1,19 +1,48 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>PostHere</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <ion-card>
-  <img src="http://pimg.p30download.com/APK_IMG/c/com.cuuappsmx.gasolinachih/icon/icon_0_small.png"/>
-  <ion-card-content>
 
-  </ion-card-content>
-  <button ion-button block color="primary"(click)="abrePosto()">Gasolina</button>
-  <button ion-button block color="secondary"(click)="abrePosto()">Alcool</button>
-</ion-card>
-  </ion-content>
+
+  <ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>PostHere</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    
+    <ion-fab right bottom>
+      <button ion-fab (click)="openClientes()">
+        <ion-icon name="archive"></ion-icon>
+      </button>
+    </ion-fab>
+  
+  <ion-item>
+    <ion-input [(ngModel)]="cad.nomePosto" type="text" placeholder="NomePosto">
+  
+    </ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-input [(ngModel)]="cad.end" type="text" placeholder="Endereco">
+    
+      </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input [(ngModel)]="cad.vlr" type="number" placeholder="ValorGasolina">
+      
+        </ion-input>
+      </ion-item>
+      
+        <button ion-button group round (click)="cadastro(cad)">Cadastrar</button>
+  
+      
+   <ion-card>
+    <!--<img src="http://pimg.p30download.com/APK_IMG/c/com.cuuappsmx.gasolinachih/icon/icon_0_small.png"/>-->
+  -
+    
+    <button ion-button block color="primary"(click)="abrePosto()">Gasolina</button>
+    <button ion-button block color="secondary"(click)="abrePosto()">Alcool</button>
+  </ion-card>
+    </ion-content>
+  

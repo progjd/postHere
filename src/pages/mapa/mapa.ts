@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, IonicPage } from 'ionic-angular';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
 
 
 
@@ -14,11 +15,13 @@ export class MapaPage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+     public navParams: NavParams, 
+     private launchNavigator: LaunchNavigator) {
 
   }
 
-  carregarMapa(){
+  /*carregarMapa(){
     navigator.geolocation.getCurrentPosition((pos)=>{
 
       let mapa = new google.maps.Map(document.getElementById('map'), {
@@ -35,14 +38,28 @@ export class MapaPage {
         });
     });
 
-  }
+  }*/
   ngOnInit(){
+
+    let options: LaunchNavigatorOptions = {
+      start: 'London, ON',
+      app: LaunchNavigator.APPS.UBER
+    };
+    
+    this.launchNavigator.navigate('Toronto, ON', options)
+      .then(
+        success => console.log('Launched navigator'),
+        error => console.log('Error launching navigator', error)
+      );
+
     let pointA = new google.maps.LatLng(51.7519, -1.2578)
     let  pointB = new google.maps.LatLng(50.8429, -0.1313)
       let myOptions = {
         zoom: 7,
         center: pointA
       };
+
+      
       let map = new google.maps.Map(document.getElementById('map'), myOptions)
       // Instantiate a directions service.
       //directionsService = new google.maps.DirectionsService,

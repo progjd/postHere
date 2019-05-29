@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lista de Postos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card *ngFor="let cli of todosClientes">
+  <img src="assets/imgs/Ipiranga.png">
+  <ion-card-content>
+  <ion-card-title>
+    {{cli.nomePosto}}
+    
+  </ion-card-title>
+      <p>{{cli.end}}</p>
+    <button ion-button color="secondary" block>R$ {{cli.vlr}} </button>
+    
+  </ion-card-content>
+  <button ion-button full outline (click)="apagar(cli.key)">Deletar</button>
+  <button ion-button block color="primary"(click)="abreMapa()">Rota</button>
+</ion-card>
+
+</ion-content>
