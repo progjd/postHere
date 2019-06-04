@@ -36,7 +36,7 @@ export class ListaClientesPage {
         //metodo ordenacao;
         let values:any[] = this.todosClientes;
         let object = Object.keys(values).map(key=>values[key])
-        this.todosClientes = object.sort((a:any,b:any)=>a.vlr > b.vlr)
+        this.todosClientes = object.sort(function(a,b){return a.vlr - b.vlr});
          
       })
     }

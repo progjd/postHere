@@ -44,7 +44,7 @@ var ListaClientesPage = /** @class */ (function () {
             //metodo ordenacao;
             var values = _this.todosClientes;
             var object = Object.keys(values).map(function (key) { return values[key]; });
-            _this.todosClientes = object.sort(function (a, b) { return a.vlr > b.vlr; });
+            _this.todosClientes = object.sort(function (a, b) { return a.vlr - b.vlr; });
         });
     }
     ListaClientesPage.prototype.apagar = function (key) {
@@ -59,7 +59,7 @@ var ListaClientesPage = /** @class */ (function () {
     };
     ListaClientesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-lista-clientes',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere/src/pages/lista-clientes/lista-clientes.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Lista de Postos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n<ion-card *ngFor="let cli of todosClientes">\n  <img src="assets/imgs/Ipiranga.png">\n  <ion-card-content>\n  <ion-card-title>\n    {{cli.nomePosto}}\n    \n  </ion-card-title>\n      <p>{{cli.end}}</p>\n    <button ion-button color="secondary" block>R$ {{cli.vlr}} </button>\n    \n  </ion-card-content>\n  <button ion-button full outline (click)="apagar(cli.key)">Deletar</button>\n  <button ion-button block color="primary"(click)="abreMapa()">Rota</button>\n</ion-card>\n\n</ion-content>'/*ion-inline-end:"/opt/lampp/htdocs/postHere/src/pages/lista-clientes/lista-clientes.html"*/,
+            selector: 'page-lista-clientes',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere2/src/pages/lista-clientes/lista-clientes.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Lista de Postos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n<ion-card *ngFor="let cli of todosClientes">\n  <img src="assets/imgs/Ipiranga.png">\n  <ion-card-content>\n  <ion-card-title>\n    {{cli.nomePosto}}\n    \n  </ion-card-title>\n      <p>{{cli.end}}</p>\n    <button ion-button color="secondary" block>R$ {{cli.vlr}} </button>\n    \n  </ion-card-content>\n  <button ion-button full outline (click)="apagar(cli.key)">Deletar</button>\n  <button ion-button block color="primary"(click)="abreMapa()">Rota</button>\n</ion-card>\n\n</ion-content>'/*ion-inline-end:"/opt/lampp/htdocs/postHere2/src/pages/lista-clientes/lista-clientes.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _c || Object])
     ], ListaClientesPage);
@@ -115,7 +115,7 @@ var UsuarioPage = /** @class */ (function () {
     };
     UsuarioPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-usuario',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere/src/pages/usuario/usuario.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Usuario</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n\n  <ion-item>\n    <ion-label>Nome</ion-label>\n    <ion-input type="text" [(ngModel)]="usuario.name"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Email</ion-label>\n    <ion-input type="text" [(ngModel)]="usuario.email"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Senha</ion-label>\n    <ion-input type="password" [(ngModel)]="usuario.password"></ion-input>\n  </ion-item>\n\n\n</ion-list>\n\n<div padding>\n  <button ion-button block (click)="addUsuario()">enviar</button>\n  <button ion-button block color="light"(click)="voltar()">voltar</button>\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/opt/lampp/htdocs/postHere/src/pages/usuario/usuario.html"*/,
+            selector: 'page-usuario',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere2/src/pages/usuario/usuario.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Usuario</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n\n  <ion-item>\n    <ion-label>Nome</ion-label>\n    <ion-input type="text" [(ngModel)]="usuario.name"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Email</ion-label>\n    <ion-input type="text" [(ngModel)]="usuario.email"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label>Senha</ion-label>\n    <ion-input type="password" [(ngModel)]="usuario.password"></ion-input>\n  </ion-item>\n\n\n</ion-list>\n\n<div padding>\n  <button ion-button block (click)="addUsuario()">enviar</button>\n  <button ion-button block color="light"(click)="voltar()">voltar</button>\n</div>\n\n\n</ion-content>\n'/*ion-inline-end:"/opt/lampp/htdocs/postHere2/src/pages/usuario/usuario.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_usuarios_usuarios__["a" /* UsuariosProvider */]])
     ], UsuarioPage);
@@ -156,11 +156,11 @@ var map = {
 		2
 	],
 	"../pages/mapa/mapa.module": [
-		443,
+		442,
 		1
 	],
 	"../pages/usuario/usuario.module": [
-		442,
+		443,
 		0
 	]
 };
@@ -379,8 +379,8 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/cadastro/cadastro.module#CadastroPageModule', name: 'CadastroPage', segment: 'cadastro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/lista-clientes/lista-clientes.module#ListaClientesPageModule', name: 'ListaClientesPage', segment: 'lista-clientes', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/usuario/usuario.module#UsuarioPageModule', name: 'UsuarioPage', segment: 'usuario', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mapa/mapa.module#MapaPageModule', name: 'MapaPage', segment: 'mapa', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/mapa/mapa.module#MapaPageModule', name: 'MapaPage', segment: 'mapa', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/usuario/usuario.module#UsuarioPageModule', name: 'UsuarioPage', segment: 'usuario', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */],
@@ -480,7 +480,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/opt/lampp/htdocs/postHere/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/opt/lampp/htdocs/postHere/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/opt/lampp/htdocs/postHere2/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">\n        {{p.title}}\n      </button>\n    </ion-list>\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/opt/lampp/htdocs/postHere2/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -498,7 +498,6 @@ var MyApp = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(32);
-throw new Error("Cannot find module \"@ionic-native/launch-navigator\"");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -510,12 +509,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var MapaPage = /** @class */ (function () {
-    function MapaPage(navCtrl, navParams, launchNavigator) {
+    function MapaPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.launchNavigator = launchNavigator;
     }
     /*carregarMapa(){
       navigator.geolocation.getCurrentPosition((pos)=>{
@@ -536,12 +533,6 @@ var MapaPage = /** @class */ (function () {
   
     }*/
     MapaPage.prototype.ngOnInit = function () {
-        var options = {
-            start: 'London, ON',
-            app: __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__["LaunchNavigator"].APPS.UBER
-        };
-        this.launchNavigator.navigate('Toronto, ON', options)
-            .then(function (success) { return console.log('Launched navigator'); }, function (error) { return console.log('Error launching navigator', error); });
         var pointA = new google.maps.LatLng(51.7519, -1.2578);
         var pointB = new google.maps.LatLng(50.8429, -0.1313);
         var myOptions = {
@@ -585,12 +576,12 @@ var MapaPage = /** @class */ (function () {
     };
     MapaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-mapa',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere/src/pages/mapa/mapa.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>map</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div id="map"></div>\n</ion-content>\n'/*ion-inline-end:"/opt/lampp/htdocs/postHere/src/pages/mapa/mapa.html"*/,
+            selector: 'page-mapa',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere2/src/pages/mapa/mapa.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>map</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div id="map"></div>\n</ion-content>\n'/*ion-inline-end:"/opt/lampp/htdocs/postHere2/src/pages/mapa/mapa.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__["LaunchNavigator"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__["LaunchNavigator"]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
     ], MapaPage);
     return MapaPage;
-    var _a, _b, _c;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=mapa.js.map
@@ -647,7 +638,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere/src/pages/home/home.html"*/'\n\n\n  <ion-header>\n    <ion-navbar>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>PostHere</ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content>\n    \n    <ion-fab right bottom>\n      <button ion-fab (click)="openClientes()">\n        <ion-icon name="archive"></ion-icon>\n      </button>\n    </ion-fab>\n  \n  <ion-item>\n    <ion-input [(ngModel)]="cad.nomePosto" type="text" placeholder="NomePosto">\n  \n    </ion-input>\n  </ion-item>\n  <ion-item>\n      <ion-input [(ngModel)]="cad.end" type="text" placeholder="Endereco">\n    \n      </ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-input [(ngModel)]="cad.vlr" type="number" placeholder="ValorGasolina">\n      \n        </ion-input>\n      </ion-item>\n      \n        <button ion-button group round (click)="cadastro(cad)">Cadastrar</button>\n  \n      \n   <ion-card>\n    <!--<img src="http://pimg.p30download.com/APK_IMG/c/com.cuuappsmx.gasolinachih/icon/icon_0_small.png"/>-->\n  -\n    \n    <button ion-button block color="primary"(click)="abrePosto()">Gasolina</button>\n    <button ion-button block color="secondary"(click)="abrePosto()">Alcool</button>\n  </ion-card>\n    </ion-content>\n  \n'/*ion-inline-end:"/opt/lampp/htdocs/postHere/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere2/src/pages/home/home.html"*/'\n\n\n  <ion-header>\n    <ion-navbar>\n      <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n      <ion-title>PostHere</ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content>\n    \n    <ion-fab right bottom>\n      <button ion-fab (click)="openClientes()">\n        <ion-icon name="archive"></ion-icon>\n      </button>\n    </ion-fab>\n  \n  <ion-item>\n    <ion-input [(ngModel)]="cad.nomePosto" type="text" placeholder="NomePosto">\n  \n    </ion-input>\n  </ion-item>\n  <ion-item>\n      <ion-input [(ngModel)]="cad.end" type="text" placeholder="Endereco">\n    \n      </ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-input [(ngModel)]="cad.vlr" type="number" placeholder="ValorGasolina">\n      \n        </ion-input>\n      </ion-item>\n      \n        <button ion-button group round (click)="cadastro(cad)">Cadastrar</button>\n  \n      \n   <ion-card>\n    <!--<img src="http://pimg.p30download.com/APK_IMG/c/com.cuuappsmx.gasolinachih/icon/icon_0_small.png"/>-->\n  -\n    \n    <button ion-button block color="primary"(click)="abrePosto()">Gasolina</button>\n    <button ion-button block color="secondary"(click)="abrePosto()">Alcool</button>\n  </ion-card>\n    </ion-content>\n  \n'/*ion-inline-end:"/opt/lampp/htdocs/postHere2/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HomePage);
@@ -731,7 +722,7 @@ var CadastroPage = /** @class */ (function () {
     };
     CadastroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-cadastro',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere/src/pages/cadastro/cadastro.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Cadastro</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding >\n  <ion-card *ngFor="let item of posto">\n  <img height="70" [src]="item.imagem"/>\n  <ion-card-content>\n    <ion-card-title>{{item.nomePosto}}</ion-card-title>\n    <p>\n    {{item.geolocalizacao}}\n    </p>\n  </ion-card-content>\n  <button ion-button block (click)="abreMapa()">ir para</button>\n  <div class="spacer" style="height:1px;" >  </div>\n  <button  ion-button color="success">R${{item.vl_txt}}</button>\n  <button ion-button block color="light"(click)="voltar()">Cancelar</button>\n</ion-card>\n</ion-content>\n'/*ion-inline-end:"/opt/lampp/htdocs/postHere/src/pages/cadastro/cadastro.html"*/,
+            selector: 'page-cadastro',template:/*ion-inline-start:"/opt/lampp/htdocs/postHere2/src/pages/cadastro/cadastro.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Cadastro</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding >\n  <ion-card *ngFor="let item of posto">\n  <img height="70" [src]="item.imagem"/>\n  <ion-card-content>\n    <ion-card-title>{{item.nomePosto}}</ion-card-title>\n    <p>\n    {{item.geolocalizacao}}\n    </p>\n  </ion-card-content>\n  <button ion-button block (click)="abreMapa()">ir para</button>\n  <div class="spacer" style="height:1px;" >  </div>\n  <button  ion-button color="success">R${{item.vl_txt}}</button>\n  <button ion-button block color="light"(click)="voltar()">Cancelar</button>\n</ion-card>\n</ion-content>\n'/*ion-inline-end:"/opt/lampp/htdocs/postHere2/src/pages/cadastro/cadastro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_postos_postos__["a" /* PostosProvider */]])
     ], CadastroPage);
