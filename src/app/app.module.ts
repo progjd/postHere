@@ -18,15 +18,18 @@ import {HttpModule, JsonpModule} from '@angular/http';
 //import { FireDataProvider } from '../providers/fire-data/fire-data';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { ListaClientesPage } from '../pages/lista-clientes/lista-clientes';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAqGMtwJ4kSWYTYG8hrjHdjGZ-RmE_58S8",
-    authDomain: "posthere-1552624061582.firebaseapp.com",
-    databaseURL: "https://posthere-1552624061582.firebaseio.com",
-    projectId: "posthere-1552624061582",
-    storageBucket: "posthere-1552624061582.appspot.com",
-    messagingSenderId: "875190677582",
-    appId: "1:875190677582:web:3f401e757ac8add8"
+  authDomain: "posthere-1552624061582.firebaseapp.com",
+  databaseURL: "https://posthere-1552624061582.firebaseio.com",
+  projectId: "posthere-1552624061582",
+  storageBucket: "posthere-1552624061582.appspot.com",
+  messagingSenderId: "875190677582",
+  appId: "1:875190677582:web:3cb09056e0e63c18"
+  
 }
 
 
@@ -46,7 +49,9 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     HttpClientModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    IonicModule
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -65,7 +70,8 @@ export const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PostosProvider,
     UsuariosProvider,
-    AngularFireDatabase
+    AngularFireDatabase,
+    LaunchNavigator
   ]
 })
 export class AppModule {}
